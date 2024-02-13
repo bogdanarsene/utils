@@ -1,0 +1,9 @@
+# directories
+
+
+# Hidden files
+.*
+
+# But not these files...
+!.gitignore
+!.dockerignore
