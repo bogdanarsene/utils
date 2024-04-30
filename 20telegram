@@ -1,0 +1,16 @@
+#!/bin/bash
+BOT_TOKEN="5946591868:AAHBEQzHbQ78nv2FF3drhk3KqFQtfoca3k0"
+CHAT_ID="484813735"
+URL='https://api.telegram.org/bot'${BOT_TOKEN}
+MSG_URL=$URL'/sendMessage?chat_id='
+
+
+send_message (){
+  curl --data-urlencode "text=$2" "${MSG_URL}$1&"
+}
+
+
+content=$(echo -e "${OMV_NOTIFICATION_DATE}\n${OMV_NOTIFICATION_SUBJECT}\n\n$(cat ${OMV_NOTIFICATION_MESSAGE_FILE})")
+
+
+send_message ${CHAT_ID} "${content[@]}"

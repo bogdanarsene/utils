@@ -1,3 +1,10 @@
+'''
+https://wiki.omv-extras.org/doku.php?id=omv7:new_user_guide
+https://docs.openmediavault.org/en/latest/administration/general/notifications.html
+https://forum.openmediavault.org/index.php?thread/14919-guide-use-telegram-as-notification-service/
+'''
+
+
 #!/bin/bash
 
 # Enable printing of commands
@@ -15,6 +22,8 @@ apt-get install openmediavault-flashmemory
 
 sudo apt-get install lm-sensors
 sudo sensors-detect
+
+sudo apt install curl
 
 # Disable printing of commands
 #set +x
